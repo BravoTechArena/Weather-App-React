@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css'
+import React from 'react'
+import Input from './Input'
+import Weather from './Weather'
+import ContextAPI from './ContextAPI'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextAPI>
+        <div className="bg-gray-800 h-screen grid place-items-center">
+          <div className='bg-white pb-3 rounded-md'>
+              <Input />
+              <Weather />
+            </div>
+        </div>
+    </ContextAPI>
   );
 }
 
